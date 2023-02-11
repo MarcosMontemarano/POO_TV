@@ -10,14 +10,14 @@ class televisor:
     def __init__(self): 
             self.canal = [1,2,3,4]
             self.power = False
+            self.canal_actual = self.canal[0]
     
-    def obtener_canal(self,canal_actual):
-           print("Se está viendo el canal N° {}".format(canal_actual))
+    def obtener_canal(self):
+           print("Se está viendo el canal N° {}".format(self.canal_actual))
     
     def canal_siguiente (self):
-        for n in range(0,len(self.canal)):
-            canal_actual = self.canal[n] + 1
-        return canal_actual
+        if self.canal_actual 
+        self.canal_actual += 1
     # Metodos
     def esta_encendido(self):
         if self.power :
@@ -29,7 +29,9 @@ class televisor:
     def set_power(self):
         if self.power :
             self.power = False
+            print("Apagado del televisor")
         else :
             self.power = True
+            print("Encendido del televisor")
 
 una_tele = televisor() # A esta variable le otorgo los atributos de esta clase
