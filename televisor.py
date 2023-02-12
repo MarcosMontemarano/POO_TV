@@ -11,14 +11,19 @@ class televisor:
             self.canal = [1,2,3,4]
             self.power = False
             self.canal_actual = self.canal[0]
-    
+    # Metodos
     def obtener_canal(self):
            print("Se está viendo el canal N° {}".format(self.canal_actual))
-    
-    def canal_siguiente (self):
-        if self.canal_actual 
-        self.canal_actual += 1
-    # Metodos
+    def canal_siguiente(self): # Sube los canales hasta el último y vuelve a comenzar
+        if self.canal_actual != self.canal[len(self.canal)-1]:
+            self.canal_actual += 1
+        else:
+            self.canal_actual = self.canal[0]
+    def canal_anterior(self): # Baja los canales hasta el primero y vuelve a comenzar
+        if self.canal_actual != self.canal[-len(self.canal)]:
+            self.canal_actual -= 1
+        else:
+            self.canal_actual = self.canal[len(self.canal)]
     def esta_encendido(self):
         if self.power :
             print("El televisor esta encendido")
@@ -34,4 +39,4 @@ class televisor:
             self.power = True
             print("Encendido del televisor")
 
-una_tele = televisor() # A esta variable le otorgo los atributos de esta clase
+una_tele = televisor() 
