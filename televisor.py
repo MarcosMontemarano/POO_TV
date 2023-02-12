@@ -6,31 +6,37 @@ devuelve un int con el número de canal en el que está el televisor, si es que 
 """
 
 class televisor:
-    # Atributos      
+    # Attributes      
     def __init__(self): 
             self.canal = [1,2,3,4]
             self.power = False
             self.canal_actual = self.canal[0]
-    # Metodos
+    # Methods
     def obtener_canal(self):
+        if self.power:
            print("Se está viendo el canal N° {}".format(self.canal_actual))
+        else:
+            print("El televisor se encuentra apagado")
+    
     def canal_siguiente(self): # Sube los canales hasta el último y vuelve a comenzar
         if self.canal_actual != self.canal[len(self.canal)-1]:
             self.canal_actual += 1
         else:
             self.canal_actual = self.canal[0]
+    
     def canal_anterior(self): # Baja los canales hasta el primero y vuelve a comenzar
         if self.canal_actual != self.canal[-len(self.canal)]:
             self.canal_actual -= 1
         else:
             self.canal_actual = self.canal[len(self.canal)]
+    
     def esta_encendido(self):
         if self.power :
             print("El televisor esta encendido")
         else:
             print("El televisor esta apagado")  
             
-    # Setter Conmutador
+    # Setter Conmutator
     def set_power(self):
         if self.power :
             self.power = False
@@ -39,4 +45,4 @@ class televisor:
             self.power = True
             print("Encendido del televisor")
 
-una_tele = televisor() 
+
