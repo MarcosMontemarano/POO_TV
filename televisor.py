@@ -28,7 +28,7 @@ class televisor:
         if self.canal_actual != self.canal[-len(self.canal)]:
             self.canal_actual -= 1
         else:
-            self.canal_actual = self.canal[len(self.canal)]
+            self.canal_actual = self.canal[len(self.canal)-1]
     
     def esta_encendido(self):
         if self.power :
