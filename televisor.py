@@ -7,7 +7,7 @@ devuelve un int con el número de canal en el que está el televisor, si es que 
 
 class televisor:
     # Attributes      
-    def __init__(self): 
+    def __init__(self): # Constructor
             self.canal = [1,2,3,4]
             self.power = False
             self.canal_actual = self.canal[0]
@@ -45,4 +45,6 @@ class televisor:
             self.power = True
             print("Encendido del televisor")
 
-
+# class SmartTv(televisor):
+#     def __init__(self):
+#         super().__init__()
